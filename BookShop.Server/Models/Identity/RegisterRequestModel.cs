@@ -1,4 +1,4 @@
-﻿namespace BookShop.Server.Models
+﻿namespace BookShop.Server.Models.Identity
 {
     public class RegisterRequestModel
     {
