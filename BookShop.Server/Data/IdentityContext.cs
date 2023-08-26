@@ -1,4 +1,4 @@
-﻿using BookShop.Server.Models;
+﻿using BookShop.Server.Data.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 

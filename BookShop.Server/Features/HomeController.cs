@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BookShop.Server.Controllers
+namespace BookShop.Server.Features
 {
     public class HomeController : ApiController
     {

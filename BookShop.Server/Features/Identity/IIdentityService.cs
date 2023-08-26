@@ -1,7 +1,6 @@
-﻿using BookShop.Server.Models.Identity;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 
-namespace BookShop.Server
+namespace BookShop.Server.Features.Identity
 {
     public interface IIdentityService
     {

@@ -1,4 +1,4 @@
-using BookShop.Server;
+using BookShop.Server.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,27 +11,26 @@ builder.Services.ConfigureJWT(builder.Configuration);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwagger();
 
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    app
+        .UseSwagger()
+        .UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
-
-app.UseRouting();
-app.UseCors(options => options
-    .AllowAnyOrigin()
-    .AllowAnyHeader()
-    .AllowAnyMethod());
-
-app.UseAuthentication();
-app.UseAuthorization();
+app
+    .UseHttpsRedirection()
+    .UseRouting()
+    .UseCors(options => options
+        .AllowAnyOrigin()
+        .AllowAnyHeader()
+        .AllowAnyMethod())
+    .UseAuthentication()
+    .UseAuthorization();
 
 app.MapControllers();
-
 app.Run();

@@ -1,12 +1,11 @@
-﻿using BookShop.Server.Models;
-using BookShop.Server.Models.Identity;
+﻿using BookShop.Server.Data.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace BookShop.Server
+namespace BookShop.Server.Features.Identity
 {
     public class IdentityService : IIdentityService
     {
@@ -24,7 +23,7 @@ namespace BookShop.Server
         {
             var user = new User
             {
-                UserName = model.Name,
+                UserName = model.UserName,
                 Email = model.Email,
             };
 

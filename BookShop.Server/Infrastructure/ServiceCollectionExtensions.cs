@@ -1,20 +1,39 @@
 ﻿using System.Text;
 using BookShop.Server.Data;
-using BookShop.Server.Models;
+using BookShop.Server.Data.Models;
+using BookShop.Server.Features.Identity;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 
-namespace BookShop.Server
+namespace BookShop.Server.Infrastructure
 {
-    public static class ServiceExtension
+    public static class ServiceCollectionExtensions
     {
         public static void ConfigureSqlContext(this IServiceCollection services, IConfiguration configuration)
         {
             services
                 .AddDbContext<IdentityContext>(options =>
                     options.UseSqlServer(configuration.GetConnectionString("Book_Shop_Server")));
+        }
+
+        public static void AddSwagger(this IServiceCollection service)
+        {
+            const string title = "Book Shop";
+            const string version = "1.0.0";
+
+            service.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc(
+                    "v1", 
+                    new OpenApiInfo
+                    {
+                        Title = title, 
+                        Version = version
+                    });
+            });
         }
 
         public static void ConfigureIdentity(this IServiceCollection services)
@@ -58,9 +77,8 @@ namespace BookShop.Server
                 });
         }
 
-        public static void RegisterDependencies(this IServiceCollection services)
-        {
-            services.AddScoped<IdentityService, IdentityService>();
-        }
+        public static void RegisterDependencies(this IServiceCollection services) 
+            => services
+                .AddScoped<IdentityService, IdentityService>();
     }
 }
