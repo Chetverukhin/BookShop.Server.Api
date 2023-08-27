@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using BookShop.Server.Infrastructure;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace BookShop.Server.Features
 {
@@ -9,7 +11,8 @@ namespace BookShop.Server.Features
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok("Works");
+            var userId = User.GetId();
+            return Ok($"Works for userId : {userId}");
         }
     }
 }

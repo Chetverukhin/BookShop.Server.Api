@@ -57,6 +57,7 @@ namespace BookShop.Server.Features.Identity
         {
             var claims = new List<Claim>
             {
+                new Claim(ClaimTypes.NameIdentifier, _user.Id),
                 new Claim(ClaimTypes.Email, _user.Email)
             };
 
