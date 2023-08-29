@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using static BookShop.Server.Data.Validation.Product;
-namespace BookShop.Server.Data.Models
+using static Core.Validation.Product;
+
+namespace Core.Models
 {
     public class Product
     {

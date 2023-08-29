@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace BookShop.Server.Features.Identity
+namespace API.Controllers.Identity
 {
     public interface IIdentityService
     {

@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace BookShop.Server.Data.Migrations.Identity
+namespace Infrastructure.Data.Migrations.Identity
 {
     /// <inheritdoc />
     public partial class InitIdentity : Migration

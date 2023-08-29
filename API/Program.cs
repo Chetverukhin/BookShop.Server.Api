@@ -1,4 +1,4 @@
-using BookShop.Server.Infrastructure;
+using API.Configurations;
 
 var builder = WebApplication.CreateBuilder(args);
 

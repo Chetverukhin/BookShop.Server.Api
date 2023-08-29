@@ -1,11 +1,11 @@
-﻿using BookShop.Server.Data.Models;
+﻿using Infrastructure;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace BookShop.Server.Features.Identity
+namespace API.Controllers.Identity
 {
     public class IdentityService : IIdentityService
     {

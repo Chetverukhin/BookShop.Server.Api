@@ -1,9 +1,8 @@
-﻿using BookShop.Server.Infrastructure;
+﻿using API.Configurations;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Security.Claims;
 
-namespace BookShop.Server.Features
+namespace API.Controllers
 {
     public class HomeController : ApiController
     {

@@ -1,14 +1,14 @@
-﻿using System.Text;
-using BookShop.Server.Data;
-using BookShop.Server.Data.Models;
-using BookShop.Server.Features.Identity;
+﻿using API.Controllers.Identity;
+using Infrastructure;
+using Infrastructure.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using System.Text;
 
-namespace BookShop.Server.Infrastructure
+namespace API.Configurations
 {
     public static class ServiceCollectionExtensions
     {

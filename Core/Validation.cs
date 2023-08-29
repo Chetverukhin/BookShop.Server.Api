@@ -1,4 +1,4 @@
-﻿namespace BookShop.Server.Data
+﻿namespace Core
 {
     public class Validation
     {

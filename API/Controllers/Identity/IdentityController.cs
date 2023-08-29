@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace BookShop.Server.Features.Identity
+namespace API.Controllers.Identity
 {
     public class IdentityController : ApiController
     {

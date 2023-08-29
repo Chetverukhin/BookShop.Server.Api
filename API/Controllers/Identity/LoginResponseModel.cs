@@ -1,4 +1,4 @@
-﻿namespace BookShop.Server.Features.Identity
+﻿namespace API.Controllers.Identity
 {
     public class LoginResponseModel
     {

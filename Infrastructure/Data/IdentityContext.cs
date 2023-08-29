@@ -1,8 +1,7 @@
-﻿using BookShop.Server.Data.Models;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace BookShop.Server.Data
+namespace Infrastructure.Data
 {
     public class IdentityContext : IdentityDbContext<User>
     {
